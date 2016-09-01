@@ -84,21 +84,39 @@ def CropFace(image, eye_left=(0,0), eye_right=(0,0), offset_pct=(0.2,0.2), dest_
 def main():
   #print usage if no args parsed
   args = sys.argv[1:]
-  if len(args) <= 1:
-     print('Usage: python <align_file>.py <image_directory> <output_directory>')
+  if len(args) < 7:
+     print('Usage: python <align_file>.py <image_directory> <output_directory> <left_x> <left_y> <right_x> <right_y> <offset_pct>')
      return
 
   #get image parser from args
   image = Image.open(args[0])
 
-  #create image cropped file name
+  #get left eye coordinates
+  left_x = int(args[2])
+  left_y = int(args[3])
+
+  #get right eye coordinates
+  right_x = int(args[4])
+  right_y = int(args[5])
+
+  #offset_pct: is the percent of the image you want to keep next to the eyes (horizontal, vertical direction)
+  offset_pct = float(args[6]) /10
+
+  #get name of file cropped
+  nameCropped = str( os.path.split(args[0])[1] )
+  nameCropped = str( os.path.splitext(nameCropped)[0] )
+
+  #set full saved image path
+  fullPathSaveIm = args[1] + nameCropped + "-crop.jpg"
+
+  CropFace(image, eye_left=(left_x,left_y), eye_right=(right_x,right_y), offset_pct=(offset_pct,offset_pct), dest_sz=(200,200)).save( fullPathSaveIm );
 
   #arnold
   #CropFace(image, eye_left=(183,266), eye_right=(306,265), offset_pct=(0.3,0.3), dest_sz=(200,200)).save(args[1] + "img_crop-50_50_200_200.jpg");
   #ronald reagen
-  CropFace(image, eye_left=(89,134), eye_right=(147,143), offset_pct=(0.3,0.3), dest_sz=(200,200)).save(args[1] + "img_crop-50_50_200_200.jpg");
+  #CropFace(image, eye_left=(89,134), eye_right=(147,143), offset_pct=(0.3,0.3), dest_sz=(200,200)).save(args[1] + "img_crop-50_50_200_200.jpg");
 
-  print('Image saved at: ' + args[1] + 'img_crop-50_50_200_200.jpg')
+  print('Image saved at: ' + fullPathSaveIm)
 
 if __name__ == "__main__":
   main()
