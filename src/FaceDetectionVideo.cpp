@@ -7,12 +7,7 @@
 
 #include "FaceDetectionVideo.h"
 
-FaceDetectionVideo::FaceDetectionVideo() {
-	// TODO Auto-generated constructor stub
+FaceDetectionVideo::FaceDetectionVideo() { }
 
-}
-
-FaceDetectionVideo::~FaceDetectionVideo() {
-	// TODO Auto-generated destructor stub
-}
+FaceDetectionVideo::~FaceDetectionVideo() {}
 
