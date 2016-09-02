@@ -68,7 +68,7 @@ int main(int argc, const char *argv[]) {
     // Check for valid command line arguments, print usage
     // if no arguments were given.
     if (argc != 4) {
-        cout << "usage: " << argv[0] << " </path/to/haar_cascade> </path/to/csv.ext> </path/to/device id>" << endl;
+        cout << "usage: " << argv[0] << " </path/to/haar_cascade> </path/to/csv.ext> <device id>" << endl;
         cout << "\t </path/to/haar_cascade> -- Path to the Haar Cascade for face detection." << endl;
         cout << "\t </path/to/csv.ext> -- Path to the CSV file with the face database." << endl;
         cout << "\t <device id> -- The webcam device id to grab frames from." << endl;
@@ -150,7 +150,7 @@ int main(int argc, const char *argv[]) {
             // First of all draw a green rectangle around the detected face:
             rectangle(original, face_i, CV_RGB(0, 255,0), 1);
             // Create the text we will annotate the box with:
-            string box_text = format("Prediction = %d", prediction);
+            string box_text = format("PessoaId = %d", prediction);
             // Calculate the position for annotated text (make sure we don't
             // put illegal values in there):
             int pos_x = std::max(face_i.tl().x - 10, 0);
@@ -161,7 +161,7 @@ int main(int argc, const char *argv[]) {
         // Show the result:
         imshow("face_recognizer", original);
         // And display it:
-        char key = (char) waitKey(0);
+        char key = (char) waitKey(20);
         // Exit this loop on escape:
         if(key == 27)
             break;
