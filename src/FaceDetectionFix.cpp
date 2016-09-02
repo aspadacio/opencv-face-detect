@@ -20,7 +20,7 @@ int filenumber; // Number of file to be saved
 string filename;
 
 // Function main
-int main(int argc, char** argv)
+int onemain(int argc, char** argv)
 {
 	CascadeClassifier face_cascade;
 

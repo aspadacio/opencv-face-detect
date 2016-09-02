@@ -1,0 +1,5 @@
+/home/aspadacio/Imagens/eu_01-crop.jpg;0
+/home/aspadacio/Imagens/eu_02-crop.jpg;0
+/home/aspadacio/Imagens/eu_03-crop.jpg;0
+
+/home/aspadacio/Imagens/meurosto-crop.jpg;1
