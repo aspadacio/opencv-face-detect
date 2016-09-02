@@ -1,5 +1,6 @@
-/home/aspadacio/Imagens/eu_01-crop.jpg;0
-/home/aspadacio/Imagens/eu_02-crop.jpg;0
-/home/aspadacio/Imagens/eu_03-crop.jpg;0
+/home/xbtse/Pictures/imagens/eu_01-crop.jpg;1
+/home/xbtse/Pictures/imagens/eu_02-crop.jpg;1
+/home/xbtse/Pictures/imagens/eu_03-crop.jpg;1
 
-/home/aspadacio/Imagens/meurosto-crop.jpg;1
+/home/xbtse/Pictures/imagens/fabricio_01-crop.jpg;2
+/home/xbtse/Pictures/imagens/fabricio_02-crop.jpg;2
