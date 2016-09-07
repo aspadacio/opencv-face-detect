@@ -1,0 +1,10 @@
+res/images/obama/0.jpg
+res/images/obama/3.jpg
+res/images/obama/5.jpg
+res/images/obama/7.jpg
+res/images/obama/9.jpg
+res/images/obama/11.jpg
+res/images/obama/12.jpg
+res/images/obama/13.jpg
+res/images/obama/15.jpg
+res/images/obama/22.jpg
