@@ -29,7 +29,7 @@ void read_training_set(const string &list_path, vector<Mat> &images) {
 
 int main(int argc, char** argv) {
 
-	 /** Initializations: **/
+	/**Initializations**/
 	FramesReader fr(string(IN_VID), START_FRAME, END_FRAME, FRAMES_DELTA);
 	Size         frame_size(fr.getSize()); //frame size of the input video
 	FaceDetector fd(string(CASCADE_PATH), DET_SCALE_FACTOR, DET_MIN_NEIGHBORS, DET_MIN_SIZE_RATIO, DET_MAX_SIZE_RATIO);
@@ -48,8 +48,7 @@ int main(int argc, char** argv) {
 	read_training_set(string(TRAINING_LIST), training_set);
 
 	PersonRecognizer pr(training_set, LBPH_RADIUS, LBPH_NEIGHBORS, LBPH_GRID_X, LBPH_GRID_Y, LBPH_THRESHOLD);
-
-	/**********************/
+	/**END-Initializations**/
 
 	while (fr.getNext(m)){
 		c++;
@@ -91,10 +90,10 @@ int main(int argc, char** argv) {
 			cw.nextLine();
 		#endif
 
-		//write some information on the frame:
+		//write some information on the bottom frame:
 		putText(m, "Face recognition demo (frontal)", POS_TITLE,
 				FONT, SCALE_TITLE, FONT_COLOR, THICKNESS_TITLE, LINE_TYPE);
-		putText(m, "http://blog.eyalarubas.com/category/opencv/", POS_LINK,
+		putText(m, "https://github.com/aspadacio/opencv-face-detect", POS_LINK,
 				FONT, SCALE_LINK, FONT_COLOR, THICKNESS_LINK, LINE_TYPE);
 		putText(m, format("Frame: %d", c), cvPoint(10, m.rows - 105),
 				FONT, 2, FONT_COLOR, 1, LINE_TYPE);
